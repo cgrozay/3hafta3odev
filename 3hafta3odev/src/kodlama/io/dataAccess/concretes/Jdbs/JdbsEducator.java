@@ -7,7 +7,7 @@ public class JdbsEducator implements EducatorDao{
 
 	@Override
 	public void add(Educator educator) {
-		System.out.println("Jdbs ile eklendi : "+educator.getFirstName());
+		System.out.println("Jdbs ile eklendi : "+educator.getFirstName()+" "+educator.getLastName());
 		
 	}
 
