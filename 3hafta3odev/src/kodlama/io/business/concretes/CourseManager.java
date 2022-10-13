@@ -20,11 +20,13 @@ public class CourseManager implements CourseManagerService {
 
 	@Override
 	public void add(Course course) throws Exception {
+
 		if (courseValidator.isValid(course) == true) {
 			this.courseDao.add(course);
 			System.out.println("Kurs eklendi =" + course.getCourseName());
 
 		}
+
 		courseDao.add(course);
 		loggerDao.log(course.getCourseName());
 

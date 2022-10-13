@@ -51,7 +51,7 @@ public class Main {
 		course2.setCategoryName(category1);
 		course2.setCourseName("C#");
 		course2.setEducatorName(educator1);
-		course2.setSalary(70);
+		course2.setSalary(-1);
 		Course[] courses = { course1 };
 
 		CategoryManager categoryManager = new CategoryManager(new HibernateCategory(),

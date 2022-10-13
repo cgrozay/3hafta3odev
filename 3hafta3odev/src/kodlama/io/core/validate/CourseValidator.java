@@ -12,13 +12,16 @@ public class CourseValidator {
 	}
 	
 	public boolean isValid(Course course) throws Exception {
-		for (Course item : courses) {
+		for (Course item : courses ) {
 			if (item.getCourseName()==course.getCourseName()) {
 				throw new Exception("Aynı isimde kurs bulunamaz");
+				
 			}
-			if (item.getSalary()<=0) {
-				throw new Exception("Kurs ücreti 0' eşit veya küçük olamaz");
+			
+			if (course.getSalary()<=0) {
+				throw new Exception("Kurs ücreti 0 veya 0 dan küçük olamaz.");
 			}
+			break;
 		}
 		
 		return true;
